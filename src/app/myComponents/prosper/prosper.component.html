@@ -1,0 +1,59 @@
+<div class="container ">
+    <div>
+        <!-- <div class=" container col-md-4">
+            <nav class="nav mt-5" >
+                <ul class="nav  flex-column ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link active text-blue " href="#" style="pointer-events: none" routerLink="prosper">Prosper</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-blue disabled" href="#">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-blue disabled" href="#">Yacht Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-blue disabled" href="#">Premium</a>
+                    </li>
+                </ul>
+             </nav>
+        </div> -->
+        <div>
+            <!-- <h3 class="text-center">Yacht & Pleasure Craft Insurance - Quotation</h3> -->
+            <p class="h4 text-center">Proposer Details</p>
+            <form [formGroup]="reactiveForm">
+                <div class="form-group">
+                    <label for="name" class="h6">Insured Name
+                        <span class="text-danger">*</span>
+                    </label><br>
+                    <input #code (input)="code.value=code.value.toUpperCase()" type="text" formControlName="name" [(ngModel)]="insuredName"
+                        style="border-top-style: hidden;width: 100%;border-left-style: hidden;border-right-style: none ;outline: none;"
+                        placeholder="Enter your name" required>
+                    <br>
+                    <div *ngIf="f['name'].touched && f['name'].invalid">
+                        <div *ngIf="f['name'].errors && f['name'].errors?.['required']" class="text-danger">
+                            Insured name is required
+                        </div>
+                    </div>
+                    <label class="h6 mt-4" for="id">Identification Number
+                        <span class="text-danger">*</span>
+                    </label><br>
+                    <input type="number" formControlName="id" [(ngModel)]="identificationNumber" 
+                        style="border-top-style: hidden;border-left-style: hidden;border-right-style: none ;width: 100%;outline: none;"
+                        placeholder="Emirates ID / Establishment Number">
+                    <div *ngIf="f['id'].touched && f['id'].invalid">
+                        <div *ngIf="f['id'].errors && f['id'].errors?.['required']" class="text-danger">
+                            Identification Number is required
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid mt-">
+                    <button type="button" class="btn btn-primary mt-4" (click)="validate()">NEXT</button>
+                </div>
+            </form>
+        </div>
+        <!-- <div class=" col-md-4">
+
+        </div> -->
+    </div>
+</div>

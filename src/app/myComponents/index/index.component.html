@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <div class="row" style="height: 30%;">
+        <div class=" container col-md-4 mt-5">
+            <nav class="nav">
+                <ul class="nav  flex-column ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link active text-blue" routerLink="prosper">Prosper</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-blue" [class.disabled]="isEnable" routerLink="schedule" href="#">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled text-blue" href="#">Yacht Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled text-blue" href="#">Premium</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class=" col-md-4">
+            <h3>Yacht & Pleasure Craft Insurance - Quotation</h3>
+            <router-outlet></router-outlet>
+        </div>
+        <div class=" col-md-4">
+
+        </div>
+    </div>
+</div>
+

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demoProject';
+  isEnable=true;
+  isEnableFunc(enable:any)
+  {
+    console.log("isenacblefunction is working");
+    this.isEnable=enable;
+  }
 }
